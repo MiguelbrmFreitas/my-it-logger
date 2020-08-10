@@ -3,13 +3,13 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 
 export const EditLogModal = () => {
     const [message, setMessage] = useState('');
-    const [urgent, setUrgent] = useState(false);
+    const [attention, setAttention] = useState(false);
     const [tech, setTech] = useState('');
 
     const clearFields = () => {
         setMessage('');
         setTech('');
-        setUrgent(false);
+        setAttention(false);
     }
     
     const onSubmit = () => {
@@ -18,7 +18,7 @@ export const EditLogModal = () => {
                 html: 'Please enter message log and tech'
             })
         } else {
-            console.log(message, tech, urgent)
+            console.log(message, tech, attention)
             // Clear Fields
             clearFields();
         }
@@ -64,9 +64,9 @@ export const EditLogModal = () => {
                                 <input 
                                     type="checkbox"
                                     className="filled-in"
-                                    checked={urgent}
-                                    value={urgent}
-                                    onChange={ e => setUrgent(!urgent)}    
+                                    checked={attention}
+                                    value={attention}
+                                    onChange={ e => setAttention(!attention)}    
                                 />
                                 <span>Urgent</span>
                             </label>

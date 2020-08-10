@@ -1,32 +1,39 @@
 {
   "logs": [
     {
-      "message": "Changed network card in server 007",
-      "attention": false,
-      "tech": "Sam Smith",
-      "date": "2019-05-31T15:46:10.179Z",
+      "message": "Acabou a Coca Cola",
+      "attention": true,
+      "tech": "Miguel Freitas",
+      "date": "2020-08-10T02:39:26.078Z",
       "id": 1
     },
     {
-      "id": 2,
-      "message": "Fixed hard drive on workstation 002",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2019-05-31T16:18:04.245Z"
+      "message": "WiFi caiu!",
+      "attention": true,
+      "tech": "Miguel Freitas",
+      "date": "2020-08-10T02:39:53.964Z",
+      "id": 2
     },
     {
-      "message": "1122 wireless down",
-      "attention": true,
-      "tech": "Sara Wilson",
-      "date": "2019-05-31T15:46:48.690Z",
+      "message": "Tem um Tesla na garagem",
+      "attention": false,
+      "tech": "Elon Musk",
+      "date": "2020-08-10T02:40:05.993Z",
       "id": 3
     },
     {
-      "id": 4,
-      "message": "Workstation 026 is up and running",
+      "message": "O iPhone da equipe quebrou",
       "attention": false,
-      "tech": "Sara Wilson",
-      "date": "2019-05-31T19:57:35.544Z"
+      "tech": "Steve Jobs",
+      "date": "2020-08-10T02:40:28.310Z",
+      "id": 4
+    },
+    {
+      "message": "HD do cliente corrompeu",
+      "attention": true,
+      "tech": "Elon Musk",
+      "date": "2020-08-10T02:41:03.587Z",
+      "id": 5
     }
   ],
   "techs": [

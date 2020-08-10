@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import M from 'materialize-css/dist/js/materialize.min.js';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { addLog } from '../../actions/logActions';
 
-export const AddLogModal = () => {
+export const AddLogModal = ({ addLog }) => {
     const [message, setMessage] = useState('');
-    const [urgent, setUrgent] = useState(false);
+    const [attention, setAttention] = useState(false);
     const [tech, setTech] = useState('');
 
     const clearFields = () => {
         setMessage('');
         setTech('');
-        setUrgent(false);
+        setAttention(false);
     }
 
     const onSubmit = () => {
@@ -18,7 +21,18 @@ export const AddLogModal = () => {
                 html: 'Please enter message log and tech'
             })
         } else {
-            console.log(message, tech, urgent)
+            // create log object
+            const log = {
+                message,
+                attention,
+                tech,
+                date: new Date()
+              };
+        
+              addLog(log);
+        
+              M.toast({ html: `Log added by ${tech}` });
+
             // Clear Fields
             clearFields();
         }
@@ -64,9 +78,9 @@ export const AddLogModal = () => {
                                 <input 
                                     type="checkbox"
                                     className="filled-in"
-                                    checked={urgent}
-                                    value={urgent}
-                                    onChange={ e => setUrgent(!urgent)}    
+                                    checked={attention}
+                                    value={attention}
+                                    onChange={ e => setAttention(!attention)}    
                                 />
                                 <span>Urgent</span>
                             </label>
@@ -83,6 +97,10 @@ export const AddLogModal = () => {
     )
 }
 
+AddLogModal.propTypes = {
+    addLog: PropTypes.func.isRequired,
+}
+
 const modalStyle = {
     width: '75%',
     height: '50%'
@@ -94,4 +112,4 @@ const footerStyle = {
     right: '16px'
 }
 
-export default AddLogModal
+export default connect(null,{addLog})(AddLogModal);
