@@ -6,7 +6,7 @@ import { getTechs } from '../../actions/techActions';
 export const TechSelectOptions = ({ getTechs, tech: { techs, loading} }) => {
     useEffect(() => {
         getTechs();
-        //exlint-disable-next-line
+        //eslint-disable-next-line
     }, [])
     
     return (

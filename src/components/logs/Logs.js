@@ -23,7 +23,7 @@ export const Logs = ({ log: {logs, loading}, getLogs}) => {
                     System Logs History
                 </h4>
             </li>
-            {!loading && logs.length == 0 ? <p className="center">No logs</p> : (
+            {!loading && logs.length === 0 ? <p className="center">No logs</p> : (
                 logs.map(log => <LogItem log={log} key={log.id}></LogItem>)
             )}
         </ul>

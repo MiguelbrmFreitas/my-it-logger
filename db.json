@@ -38,11 +38,6 @@
   ],
   "techs": [
     {
-      "id": 1,
-      "firstName": "John",
-      "lastName": "Doe"
-    },
-    {
       "id": 2,
       "firstName": "Sam",
       "lastName": "Smith"
@@ -61,11 +56,6 @@
       "firstName": "Elon",
       "lastName": "Musk",
       "id": 5
-    },
-    {
-      "firstName": "Elon",
-      "lastName": "Musk",
-      "id": 6
     },
     {
       "firstName": "Steve",
